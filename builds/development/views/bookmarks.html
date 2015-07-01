@@ -1,0 +1,27 @@
+<section class="bookmark col-md-7 col-md-offset-3">
+
+	<h1>Add Bookmarks</h1>
+	<form class="form-signin"
+		name="myform" ng-submit="addBookmark()"novalidate>
+
+		<input type="text" class="form-control" name="bookmarkName" placeholder="Bookmark name"
+		 ng-model="bookmarkName" ng-required="true">
+
+		 <input type="text" class="form-control" name="bookmarkUrl" placeholder="URL"
+		  ng-model="bookmarkUrl" ng-required="true"> 
+
+		 <br><button type="submit" class="btn" ng-disabled="myform.$invalid">Add Bookmark</button>
+
+	</form>
+
+	<h1>Your Bookmarks</h1>
+	<div class="bookmark" ng-repeat="(key, bookmark) in bookmarks">
+		<ul class="book-list">
+			<li>
+				<a href="{{bookmark.url}}">{{bookmark.name}}</a>
+				<button class="btn btn-danger center-block" ng-click="deleteBookmark(key)">X</button> 
+			</li>
+		</ul>
+	</div>
+
+</section>

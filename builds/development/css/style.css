@@ -1,0 +1,29 @@
+
+
+/* Register and Login ------------------------ */
+
+form {
+  display: block;
+}
+
+.form-signin {
+  max-width: 500px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-control{
+  padding-top: 10px;
+
+}
+
+/* Bookmarks Page ----------------------------- */
+
+.bookmark {
+  background-color: #9DA7FF;
+  border-radius: 10px;
+}
+
+.bookmark h1 {
+  text-align: center
+}

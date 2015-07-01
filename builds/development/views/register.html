@@ -1,0 +1,37 @@
+<section class="register">
+
+	<form class="form-signin" name="myform" ng-submit="register()" novalidate>
+		<h2 class="form-signin-heading">Register</h2>
+
+		<p class="error-message" ng-show="message">{{message}}</p>
+
+		<label for="inputFirstName" class="sr-only">First Name</label>
+		<input type="firstname" name="firstname" id="inputFirstName" class="form-control" placeholder="First Name" autofocus ng-model="user.firstname" ng-required="true">
+		<p class="error" ng-show="myform.firstname.$invalid && myform.firstname.$touched">
+			First Name is required</p>
+
+		<label for="inputLastName" class="sr-only">Last Name</label>
+		<input type="lastname" name="lastname" id="inputLastName" class="form-control" placeholder="Last Name"
+		 ng-model="user.lastname" ng-required="true">
+		<p class="error" ng-show="myform.lastname.$invalid && myform.lastname.$touched">
+			Last Name is required</p>
+
+		<label for="inputEmail" class="sr-only">Email address</label>
+		<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address"
+		 ng-model="user.email" ng-required="true">
+		<p class="error" ng-show="myform.email.$invalid && myform.email.$touched">
+			Must be a valid email</p>
+
+		<label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password"
+			ng-model="user.password" ng-required="true">
+		<p class="error" ng-show="myform.password.$invalid && myform.password.$touched">
+			Password is required</p><br>
+
+		<button class="btn btn-lg btn-primary btn-block" type="submit"
+			ng-disabled="myform.$invalid">Register</button>
+		<p>or <a href="#/login">login</a></p>
+
+	</form>
+
+</section>
